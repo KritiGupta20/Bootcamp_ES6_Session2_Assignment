@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9</title>
+</head>
+
+<body>
+    <script>
+        var data = [2, 0, 0, 5, 1, 9, 9, 9];
+        var Maps = new Map();
+        var Sets = new Set();
+        for (var i = 0; i < data.length; i++) {
+            Maps.set(i, data[i]);
+            Sets.add(data[i]);
+        }
+        console.log(Maps);
+        console.log(Sets);
+        for (var i = 0; i < data.length; i++) {
+            console.log(Maps.get(i));
+        }
+        console.log(Sets.has(5));
+    </script>
+</body>
+
+</html>

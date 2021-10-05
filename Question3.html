@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+</head>
+
+<body>
+    <h1>SEE CONSOLE</h1>
+    <Script>
+        class person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            getname() {
+                return "my name is :  " + this.name + " and I am " + this.age;
+            }
+        }
+
+        class lead_programmer extends person {
+            constructor(name, age, years_of_experience) {
+                super(name, age);
+                this.years_of_experience = years_of_experience;
+            }
+            getname2() {
+                return "my name is : " + this.name + " and my age is " + this.age + " , also I have  experience of " + this.years_of_experience + " years ";
+            }
+
+        }
+        class associate_programmer extends lead_programmer {
+            constructor(name, age, years_of_experience, profile) {
+                super(name, age, years_of_experience);
+                this.profile = profile;
+
+            }
+            getname3() {
+                return super.getname2() + " I work as a:" + this.profile;
+            }
+
+        }
+        let person1 = new person("Kriti", 22);
+        let lead_programmer1 = new lead_programmer("Vaishnavi", 23, 2);
+        let associate_programmer1 = new associate_programmer("Manya", 20, 1, "front end engineer");
+
+        console.log(person1.getname());
+        console.log(lead_programmer1.getname2());
+        console.log(associate_programmer1.getname3());
+    </Script>
+</body>
+
+</html>
